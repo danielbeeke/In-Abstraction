@@ -1,0 +1,25 @@
+<template name="manageQuestionsAdd">
+    <h1>Create a new question</h1>
+    <form id="manage-questions-add">
+        <div class="form-item">
+            <label>Name:</label>
+            <input name="name" type="text">
+        </div>
+
+        <div class="form-item">
+            <label>Description:</label>
+            <textarea name="description"></textarea>
+        </div>
+
+        {{#each Axes}}
+            <div class="form-item">
+                <label>{{ name }}</label>
+                <input type="number">
+            </div>
+        {{/each}}
+
+        <div class="form-actions">
+            <button id="submit">Save</button>
+        </div>
+    </form>
+</template>

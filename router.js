@@ -22,7 +22,15 @@ Router.route(
 Router.route(
     '/manage/questions/add',
     {
-        name: 'manage-questions-add'
+        name: 'manage-questions-add',
+        waitOn: function () {
+            return Meteor.subscribe('Axes')
+        },
+        data: function () {
+            return {
+                Axes: Axes.find()
+            }
+        }
     }
 );
 
@@ -43,14 +51,20 @@ Router.route(
 Router.route(
     '/manage/axes',
     {
-        name: 'manage-axes'
+        name: 'manage-axes',
+        waitOn: function () {
+            return Meteor.subscribe('Axes')
+        }
     }
 );
 
 Router.route(
     '/manage/axes/add',
     {
-        name: 'manage-axes-add'
+        name: 'manage-axes-add',
+        waitOn: function () {
+            return Meteor.subscribe('Axes')
+        }
     }
 );
 

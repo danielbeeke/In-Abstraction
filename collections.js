@@ -32,7 +32,7 @@ Axes = new Mongo.Collection("axes");
 
 Axes.allow({
     insert: function (userId, doc) {
-        return userId;
+        return true;
     },
     update: function (userId, doc, fields, modifier) {
         return doc._uid === userId;
