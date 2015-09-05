@@ -1,3 +1,5 @@
 <template name="manageAxes">
     <h1>Manage Axes</h1>
+    <a href="{{ pathFor 'manage-axes-add' }}">Create a new axe</a>
+    {{> reactiveTable settings=tableSettings}}
 </template>
