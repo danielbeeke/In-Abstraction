@@ -20,6 +20,55 @@ Router.route(
 );
 
 Router.route(
+    '/manage/questions/add',
+    {
+        name: 'manage-questions-add'
+    }
+);
+
+Router.route(
+    '/manage/questions/:_id',
+    {
+        name: 'manage-questions-item'
+    }
+);
+
+Router.route(
+    '/manage/questions/:_id/delete',
+    {
+        name: 'manage-questions-item-delete'
+    }
+);
+
+Router.route(
+    '/manage/axes',
+    {
+        name: 'manage-axes'
+    }
+);
+
+Router.route(
+    '/manage/axes/add',
+    {
+        name: 'manage-axes-add'
+    }
+);
+
+Router.route(
+    '/manage/axes/:_id',
+    {
+        name: 'manage-axes-item'
+    }
+);
+
+Router.route(
+    '/manage/axes/:_id/delete',
+    {
+        name: 'manage-axes-item-delete'
+    }
+);
+
+Router.route(
     '/questionnaire',
     {
         name: 'questionnaire'
