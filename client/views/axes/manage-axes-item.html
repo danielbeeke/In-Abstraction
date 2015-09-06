@@ -1,3 +1,19 @@
 <template name="manageAxesItem">
     <h1>Axes Item</h1>
+
+    <form id="manage-axes-item">
+        <div class="form-item">
+            <label>Name:</label>
+            <input name="name" value="{{ name }}" type="text">
+        </div>
+
+        <div class="form-item">
+            <label>Description:</label>
+            <textarea name="description">{{ description }}</textarea>
+        </div>
+
+        <div class="form-actions">
+            <button id="submit">Update</button>
+        </div>
+    </form>
 </template>

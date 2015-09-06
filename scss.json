@@ -1,0 +1,7 @@
+{
+  "enableAutoprefixer": true,
+  "autoprefixerOptions": {
+      "browsers": ["> 5%", "iOS 7", "Android 4"],
+      "cascade": false
+  }
+}

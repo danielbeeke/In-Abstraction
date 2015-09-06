@@ -11,5 +11,28 @@ Template.manageQuestionsAdd.events({
         });
 
         Router.go('manage-questions')
+    },
+    "click .add-a-new-answer": function (event, template) {
+        event.preventDefault()
+        var Answers = Session.get('manageQuestionsAdd.answers');
+
+        if (!Answers) {
+            Answers = []
+        }
+
+        Answers.push({
+            name: 'New answer'
+        });
+
+        Session.set('manageQuestionsAdd.answers', Answers);
+
     }
 });
+
+Template.manageQuestionsAdd.helpers({
+    Answers: function () {
+        var Answers = Session.get('manageQuestionsAdd.answers');
+
+        return Answers
+    }
+})

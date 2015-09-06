@@ -35,10 +35,10 @@ Axes.allow({
         return true;
     },
     update: function (userId, doc, fields, modifier) {
-        return doc._uid === userId;
+        return true;
     },
     remove: function (userId, doc) {
-        return doc._uid === userId;
+        return true;
     },
     fetch: ['_uid']
 });

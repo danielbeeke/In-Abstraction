@@ -11,12 +11,24 @@
             <textarea name="description"></textarea>
         </div>
 
-        {{#each Axes}}
-            <div class="form-item">
-                <label>{{ name }}</label>
-                <input type="number">
-            </div>
-        {{/each}}
+        <div class="form-item">
+            {{#each Answers}}
+                <fieldset>
+                    <div class="form-item">
+                        <label>Answer</label>
+                        <input type="text">
+                    </div>
+
+                    {{#each ../Axes}}
+                        <div class="form-item">
+                            <label>{{ name }}</label>
+                            <input type="number">
+                        </div>
+                    {{/each}}
+                </fieldset>
+            {{/each}}
+            <a href="#" class="add-a-new-answer">Add a new answer</a>
+        </div>
 
         <div class="form-actions">
             <button id="submit">Save</button>

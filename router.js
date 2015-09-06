@@ -71,14 +71,26 @@ Router.route(
 Router.route(
     '/manage/axes/:_id',
     {
-        name: 'manage-axes-item'
+        name: 'manage-axes-item',
+        waitOn: function () {
+            return Meteor.subscribe('Axes')
+        },
+        data: function () {
+            return Axes.findOne({ _id: this.params._id })
+        }
     }
 );
 
 Router.route(
     '/manage/axes/:_id/delete',
     {
-        name: 'manage-axes-item-delete'
+        name: 'manage-axes-item-delete',
+        waitOn: function () {
+            return Meteor.subscribe('Axes')
+        },
+        data: function () {
+            return Axes.findOne({ _id: this.params._id })
+        }
     }
 );
 

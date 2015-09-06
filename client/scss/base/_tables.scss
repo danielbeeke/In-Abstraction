@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid $gray-light;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.reactive-table-options,
+.reactive-table-navigation {
+  padding: 10px 0;
+}
